@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard - Media Pembelajaran Perundungan Digital Kelas 8</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 glassmorphism border-b border-slate-200/80 px-4 py-3 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-3">
+                <div class="bg-indigo-600 text-white p-2.5 rounded-2xl shadow-lg shadow-indigo-500/30 flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight flex items-center gap-2">
+                        CyberGuard <span class="text-xs bg-indigo-100 text-indigo-700 px-2.5 py-1 rounded-full font-bold">Informatika Kelas 8</span>
+                    </h1>
+                    <p class="text-xs text-slate-500">Katakan TIDAK pada Perundungan Digital!</p>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="flex items-center bg-slate-100 p-1.5 rounded-xl overflow-x-auto max-w-full gap-1">
+                <button onclick="switchTab('belajar')" id="btn-belajar" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-white text-indigo-600 shadow-sm">
+                    <i class="fa-solid fa-book-open mr-1.5"></i>Belajar
+                </button>
+                <button onclick="switchTab('detektif')" id="btn-detektif" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-magnifying-glass-chart mr-1.5"></i>Detektif Cyber (AI)
+                </button>
+                <button onclick="switchTab('kuis')" id="btn-kuis" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-gamepad mr-1.5"></i>Kuis Interaktif
+                </button>
+                <button onclick="switchTab('poster')" id="btn-poster" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-palette mr-1.5"></i>Bikin Poster (AI)
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-8">
+
+        <!-- ================= TAB: BELAJAR ================= -->
+        <section id="tab-belajar" class="tab-content block space-y-8 animate-fade-in">
+            <!-- Hero banner -->
+            <div class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-6 sm:p-12 text-white shadow-xl shadow-indigo-500/10 overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-[180px] pointer-events-none">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="relative z-10 max-w-2xl">
+                    <span class="bg-white/20 text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full backdrop-blur-sm">Materi Utama</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-4 mb-2">Kenali & Perangi Perundungan Digital!</h2>
+                    <p class="text-indigo-100 text-sm sm:text-base leading-relaxed">
+                        Di era internet ini, bersosialisasi jadi sangat mudah. Namun, kita harus tetap menjaga etika dan menjauhi perilaku perundungan digital (cyberbullying) demi kenyamanan bersama.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Apa itu cyberbullying? -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-pink-100 text-pink-600">
+                        <i class="fa-solid fa-circle-question text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Apa itu Perundungan Digital?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        <strong>Perundungan Digital (Cyberbullying)</strong> adalah perilaku berulang yang ditujukan untuk menakuti, membuat marah, atau mempermalukan mereka yang menjadi sasaran menggunakan teknologi digital seperti media sosial, platform chatting, game online, dan ponsel.
+                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ingat! Perbedaan candaan biasa dengan bullying terletak pada perasaan orang yang menerimanya. Jika sudah menyakiti hati dan dilakukan berulang kali, itu adalah tindakan perundungan!
+                    </p>
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <!-- Custom SVG Illustration of a secure device vs digital threat -->
+                    <svg class="w-full max-w-[360px] h-auto" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="80" y="40" width="240" height="320" rx="24" fill="#E2E8F0" stroke="#94A3B8" stroke-width="8"/>
+                        <rect x="90" y="50" width="220" height="260" rx="16" fill="#F8FAFC"/>
+                        <circle cx="200" cy="335" r="15" fill="#CBD5E1"/>
+                        <circle cx="200" cy="110" r="45" fill="#FFE4E6"/>
+                        <path d="M180 115C185 105 215 105 220 115" stroke="#F43F5E" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="185" cy="100" r="4" fill="#F43F5E"/>
+                        <circle cx="215" cy="100" r="4" fill="#F43F5E"/>
+                        <rect x="120" y="180" width="160" height="80" rx="12" fill="#EEF2F6"/>
+                        <text x="135" y="210" fill="#64748B" font-family="sans-serif" font-size="12" font-weight="bold">#StopBullying</text>
+                        <text x="135" y="230" fill="#94A3B8" font-family="sans-serif" font-size="10">Be Kind Online</text>
+                        <circle cx="280" cy="180" r="16" fill="#3B82F6" class="animate-bounce"/>
+                        <path d="M276 176L284 184M284 176L276 184" stroke="white" stroke-width="2"/>
+                        <circle cx="120" cy="250" r="16" fill="#10B981"/>
+                        <path d="M115 250L118 253L125 246" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Jenis-jenis perundungan digital -->
+            <div class="space-y-6">
+                <div class="text-center max-w-xl mx-auto">
+                    <h3 class="text-2xl font-bold text-slate-900">Bentuk-Bentuk Perundungan Digital</h3>
+                    <p class="text-sm text-slate-500 mt-2">Pahami jenis-jenisnya agar kamu bisa mengidentifikasi dan menghindarinya.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Jenis 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 transition-all duration-300 shadow-sm group">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-fire text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Flaming (Pelecehan Kobaran)</h4>
+                        <p class="text-xs text-slate-500 mb-3">Tindakan mengirim pesan teks yang berisi kata-kata frontal, penuh amarah, dan menyerang secara online.</p>
+                        <span class="text-xs font-semibold bg-amber-50 text-amber-700 px-2 py-1 rounded">Contoh: Berdebat kasar di kolom komentar</span>
+                    </div>
+
+                    <!-- Jenis 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 transition-all duration-300 shadow-sm group">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Harassment (Gangguan)</h4>
+                        <p class="text-xs text-slate-500 mb-3">Mengirim pesan bernada ancaman, hasutan, atau gangguan secara terus-menerus melalui media sosial.</p>
+                        <span class="text-xs font-semibold bg-red-50 text-red-700 px-2 py-1 rounded">Contoh: DM mengancam berhari-hari</span>
+                    </div>
+
+                    <!-- Jenis 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 transition-all duration-300 shadow-sm group">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-user-slash text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Exclusion (Pengecualian)</h4>
+                        <p class="text-xs text-slate-500 mb-3">Sengaja mengeluarkan seseorang secara kejam dari grup chat atau komunitas online sosial.</p>
+                        <span class="text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-1 rounded">Contoh: Mengeluarkan teman dari grup kelas agar dia sedih</span>
+                    </div>
+
+                    <!-- Jenis 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 transition-all duration-300 shadow-sm group">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mask text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Impersonation (Penyamaran)</h4>
+                        <p class="text-xs text-slate-500 mb-3">Membuat akun palsu menggunakan identitas orang lain untuk merusak reputasi orang tersebut.</p>
+                        <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded">Contoh: Bikin akun IG palsu buat sebar info hoax</span>
+                    </div>
+
+                    <!-- Jenis 5 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 transition-all duration-300 shadow-sm group">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-eye text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Cyberstalking</h4>
+                        <p class="text-xs text-slate-500 mb-3">Menguntit gerak-gerik seseorang di internet secara berlebihan sehingga menimbulkan rasa takut hebat.</p>
+                        <span class="text-xs font-semibold bg-teal-50 text-teal-700 px-2 py-1 rounded">Contoh: Menguntit info pribadi dan mengancam menyebarkannya</span>
+                    </div>
+
+                    <!-- Jenis 6 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 transition-all duration-300 shadow-sm group">
+                        <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-share-nodes text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Outing & Trickery</h4>
+                        <p class="text-xs text-slate-500 mb-3">Menyebarkan rahasia atau foto pribadi orang lain untuk mempermalukannya di depan publik.</p>
+                        <span class="text-xs font-semibold bg-pink-50 text-pink-700 px-2 py-1 rounded">Contoh: Share foto memalukan teman tanpa izin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cara Mengatasi / Stop, Block, Tell -->
+            <div class="bg-indigo-50 rounded-3xl p-6 sm:p-10 border border-indigo-100">
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="space-y-4 lg:w-1/2">
+                        <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full uppercase">Strategi Jitu</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-indigo-900">Apa yang Harus Dilakukan Jika Menjadi Korban?</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Jangan panik dan tetap tenang! Kamu memegang kendali penuh atas keamanan digitalmu sendiri. Ingat formula sakti ini: <strong>STOP, BLOCK, TELL!</strong>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:w-1/2 w-full">
+                        <div class="bg-white p-5 rounded-2xl border border-indigo-100 flex flex-col items-center text-center shadow-sm">
+                            <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-lg mb-3">1</div>
+                            <h5 class="font-bold text-slate-900 mb-1">STOP (Abaikan)</h5>
+                            <p class="text-xs text-slate-500">Jangan membalas atau meladeni pesan pelaku agar mereka tidak makin senang.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-indigo-100 flex flex-col items-center text-center shadow-sm">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-lg mb-3">2</div>
+                            <h5 class="font-bold text-slate-900 mb-1">BLOCK (Blokir)</h5>
+                            <p class="text-xs text-slate-500">Blokir akun pelaku seketika dan amankan semua privasi media sosial kamu.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-indigo-100 flex flex-col items-center text-center shadow-sm">
+                            <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-lg mb-3">3</div>
+                            <h5 class="font-bold text-slate-900 mb-1">TELL (Laporkan)</h5>
+                            <p class="text-xs text-slate-500">Simpan bukti tangkapan layar (screenshot), lalu laporkan ke Guru BK, Orang Tua, atau Polisi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB: DETEKTIF CYBER (AI) ================= -->
+        <section id="tab-detektif" class="tab-content hidden space-y-6 animate-fade-in">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase">Pendeteksi Bullying AI</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Uji Detektif Kasus Cyberbullying</h2>
+                    <p class="text-slate-500 text-sm">Masukkan komentar, chat, atau situasi mencurigakan yang kamu temui secara online. Biarkan AI menganalisis tingkat bahayanya!</p>
+                </div>
+
+                <!-- Template quick-clicks -->
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Coba Contoh Kasus:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="fillExample('Halah cupu banget main gamenya, hapus aja game lu gembel!')" class="text-xs bg-white hover:bg-indigo-50 border border-slate-200 hover:border-indigo-300 text-slate-700 px-3 py-2 rounded-xl transition-all">
+                            🎮 Komentar Game Online
+                        </button>
+                        <button onclick="fillExample('Eh guys, jangan temenin si Riko di grup ini ya. Dia aneh banget anaknya.')" class="text-xs bg-white hover:bg-indigo-50 border border-slate-200 hover:border-indigo-300 text-slate-700 px-3 py-2 rounded-xl transition-all">
+                            💬 Pengecualian Grup Chat
+                        </button>
+                        <button onclick="fillExample('Foto kamu waktu tidur jelek banget, mau aku sebarin ke satu angkatan biar malu?')" class="text-xs bg-white hover:bg-indigo-50 border border-slate-200 hover:border-indigo-300 text-slate-700 px-3 py-2 rounded-xl transition-all">
+                            📷 Ancaman Penyebaran Foto
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Input area -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                    <label for="scenario-input" class="block font-bold text-slate-900 text-sm">Tulis kalimat / komentar sosial mediamu di sini:</label>
+                    <textarea id="scenario-input" rows="4" class="w-full p-4 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-400 text-sm" placeholder="Contoh: Lu jelek banget sih, ga pantes ikutan foto bersama di sekolah..."></textarea>
+                    
+                    <button onclick="analyzeScenario()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        Mulai Analisis Kasus (AI)
+                    </button>
+                </div>
+
+                <!-- Loader -->
+                <div id="ai-loader" class="hidden flex-col items-center justify-center py-12 space-y-3">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600"></div>
+                    <p class="text-sm font-semibold text-slate-600 animate-pulse">Menghubungkan ke server pendeteksi perundungan...</p>
+                </div>
+
+                <!-- Result Card -->
+                <div id="ai-result" class="hidden bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6 animate-fade-in">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <span id="badge-level" class="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">SEDANG</span>
+                        <h4 class="font-bold text-slate-900">Hasil Analisis Kasus</h4>
+                    </div>
+
+                    <!-- Output Details -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Kesimpulan Kategori:</h5>
+                            <p id="analysis-category" class="font-bold text-slate-800 text-lg">Menunggu analisis...</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Mengapa Ini Tergolong Bullying?</h5>
+                            <p id="analysis-reason" class="text-sm text-slate-600 leading-relaxed">Menunggu analisis...</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Steps -->
+                    <div class="bg-indigo-50 p-5 rounded-2xl border border-indigo-100 space-y-3">
+                        <h5 class="font-bold text-indigo-900 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-indigo-600"></i> Rekomendasi Aksi/Tindakan:
+                        </h5>
+                        <p id="analysis-action" class="text-sm text-indigo-950 leading-relaxed">Menunggu analisis...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB: KUIS INTERAKTIF ================= -->
+        <section id="tab-kuis" class="tab-content hidden space-y-6 animate-fade-in">
+            <div class="max-w-2xl mx-auto">
+                
+                <!-- Start Screen -->
+                <div id="quiz-start-screen" class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-md space-y-6">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-2xl font-extrabold text-slate-900">Uji Pengetahuan Cyberbullying-mu!</h2>
+                        <p class="text-slate-500 text-sm">Uji seberapa paham kamu tentang materi Informatika Bab Perundungan Digital Kelas 8 ini. Selesaikan kuis dan raih sertifikat kelulusan!</p>
+                    </div>
+                    <button onclick="startQuiz()" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-8 rounded-2xl transition-all shadow-lg shadow-indigo-600/20">
+                        Mulai Kuis Sekarang!
+                    </button>
+                </div>
+
+                <!-- Quiz Playing Screen -->
+                <div id="quiz-play-screen" class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-md space-y-6">
+                    <!-- Progress Bar -->
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                        <span id="quiz-progress-text">Pertanyaan 1 dari 5</span>
+                        <span id="quiz-timer">Skor: 0</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2">
+                        <div id="quiz-progress-bar" class="bg-indigo-600 h-2 rounded-full transition-all duration-300" style="width: 20%"></div>
+                    </div>
+
+                    <!-- Question text -->
+                    <h3 id="quiz-question" class="text-lg sm:text-xl font-bold text-slate-900">Apa definisi utama dari cyberbullying?</h3>
+
+                    <!-- Options list -->
+                    <div id="quiz-options" class="flex flex-col gap-3">
+                        <!-- Option buttons will be generated by JS -->
+                    </div>
+
+                    <!-- Bottom Bar (Next Button) -->
+                    <div class="flex justify-end pt-4 border-t border-slate-100">
+                        <button id="btn-next-quiz" onclick="nextQuestion()" disabled class="bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl transition-all cursor-not-allowed">
+                            Lanjut <i class="fa-solid fa-chevron-right ml-1.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results Screen -->
+                <div id="quiz-result-screen" class="hidden bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-md space-y-6">
+                    <div id="result-emoji" class="text-6xl">🏆</div>
+                    <div class="space-y-2">
+                        <h2 class="text-2xl font-extrabold text-slate-900">Hasil Kuis Kamu!</h2>
+                        <p class="text-slate-500 text-sm" id="quiz-feedback-text">Luar biasa! Kamu memahami cara menjaga perdamaian di internet.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 max-w-sm mx-auto grid grid-cols-2 gap-4">
+                        <div>
+                            <span class="block text-xs font-bold text-slate-400 uppercase">Skor Akhir</span>
+                            <span id="quiz-score-display" class="text-3xl font-extrabold text-indigo-600">100/100</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold text-slate-400 uppercase">Akurasi</span>
+                            <span id="quiz-accuracy-display" class="text-3xl font-extrabold text-green-600">100%</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <button onclick="startQuiz()" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3.5 px-6 rounded-2xl transition-all">
+                            Coba Lagi
+                        </button>
+                        <button onclick="switchTab('poster')" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-lg shadow-indigo-600/20">
+                            Bikin Poster Kampanye AI
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= TAB: BIKIN POSTER (AI) ================= -->
+        <section id="tab-poster" class="tab-content hidden space-y-6 animate-fade-in">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase">Kreator Gambar AI</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Generator Poster Anti-Cyberbullying</h2>
+                    <p class="text-slate-500 text-sm">Pilih tema kampanye yang kamu sukai, lalu buatlah poster visual yang indah dan mengagumkan secara instan menggunakan AI Imagen 4!</p>
+                </div>
+
+                <!-- Input Controls -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="space-y-2">
+                        <label class="block font-bold text-slate-900 text-sm">Pilih Gaya & Tema Poster:</label>
+                        <select id="poster-style" class="w-full p-4 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 text-sm bg-white">
+                            <option value="A vibrant 3D digital art illustration of children holding hands in front of a giant computer shield, cheerful atmosphere, bright colors, friendly message 'Be Kind Online'">Aman di Media Sosial (Gaya 3D Digital)</option>
+                            <option value="A minimalist modern flat vector illustration showing friendship in digital era, hands coming out of mobile screen giving a heart, high saturation, soft palette">Persahabatan Digital (Gaya Flat Vector)</option>
+                            <option value="A cute anime style illustration of students working together on tablet designing positive campaign posters, bright light, happy mood">Kolaborasi Positif (Gaya Anime Ceria)</option>
+                            <option value="An futuristic cyber defense illustration, neon aesthetic, a high-tech shield protecting a group of diverse teenagers chat bubbles, sleek design">Pertahanan Cyber & Gadget (Gaya Cyberpunk-Sleek)</option>
+                        </select>
+                    </div>
+
+                    <button onclick="generatePoster()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paintbrush"></i>
+                        Buat Poster Menggunakan AI
+                    </button>
+                </div>
+
+                <!-- Image Loader -->
+                <div id="image-loader" class="hidden flex-col items-center justify-center py-16 space-y-3 bg-white rounded-3xl border border-slate-200">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600"></div>
+                    <p class="text-sm font-semibold text-slate-600">Menggambar poster kampanye terbaikmu dengan Imagen-4...</p>
+                    <p class="text-xs text-slate-400">Proses pembuatan visual biasanya memakan waktu sekitar 5-10 detik.</p>
+                </div>
+
+                <!-- Image Result Card -->
+                <div id="image-result" class="hidden bg-white rounded-3xl border border-slate-200 p-6 shadow-md flex flex-col items-center space-y-4">
+                    <div class="w-full aspect-square max-w-[400px] bg-slate-100 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center border border-slate-100">
+                        <img id="generated-poster-img" src="" alt="Poster Kampanye Bullying Digital" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="text-center space-y-1">
+                        <h4 class="font-bold text-slate-900 text-lg">Poster Sukses Dibuat! 🎉</h4>
+                        <p class="text-xs text-slate-400">Gunakan poster buatan AI ini untuk melakukan kampanye perdamaian online di kelasmu.</p>
+                    </div>
+
+                    <a id="download-poster-btn" href="#" download="poster-anti-cyberbullying.png" class="bg-indigo-50 text-indigo-700 font-bold py-2.5 px-6 rounded-xl hover:bg-indigo-100 transition-all text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Simpan Gambar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-8 px-4 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto space-y-2">
+            <p class="font-semibold text-slate-800">Mari Ciptakan Ruang Digital yang Ramah dan Menyenangkan!</p>
+            <p>Dikembangkan untuk Pelajaran Informatika Kelas 8 Kurikulum Merdeka.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Tab Management
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('block'));
+            
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('block');
+
+            // Reset active button state
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-indigo-600', 'shadow-sm');
+                btn.classList.add('text-slate-600', 'hover:text-slate-900');
+            });
+
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            activeBtn.classList.remove('text-slate-600', 'hover:text-slate-900');
+            activeBtn.classList.add('bg-white', 'text-indigo-600', 'shadow-sm');
+        }
+
+        // --- DETEKTIF CYBER (AI DETECTOR) LOGIC ---
+        function fillExample(text) {
+            document.getElementById('scenario-input').value = text;
+        }
+
+        async function analyzeScenario() {
+            const inputVal = document.getElementById('scenario-input').value.trim();
+            if (!inputVal) {
+                alert("Masukkan teks komentar terlebih dahulu ya!");
+                return;
+            }
+
+            const loader = document.getElementById('ai-loader');
+            const resultCard = document.getElementById('ai-result');
+            loader.classList.remove('hidden');
+            resultCard.classList.add('hidden');
+
+            const apiKey = ""; // Disuplai otomatis saat runtime oleh lingkungan sandbox
+            const systemPrompt = `
+                Kamu adalah seorang Guru Informatika Kelas 8 SMP yang ramah, bijak, dan sangat memahami dinamika sosial remaja.
+                Tugasmu adalah menganalisis input teks komentar sosial media yang dimasukkan siswa.
+                Tentukan apakah komentar tersebut tergolong sebagai Cyberbullying (Perundungan Digital) atau Aman.
+                Berikan respon terstruktur dalam format JSON dengan key:
+                1. "level": bisa bernilai "AMAN", "RINGAN", "BAHAYA"
+                2. "category": klasifikasi tindakan (misal: Flaming, Harassment, Outing, atau Aman/Komentar Biasa)
+                3. "reason": jelaskan mengapa komentar ini masuk kategori tersebut secara logis dan menyentuh hati remaja kelas 8
+                4. "action": berikan rekomendasi aksi konkret bagi yang menerima pesan/komentar tersebut agar mereka merasa terlindungi (Ingat formula Stop, Block, Tell).
+
+                Bahasa yang digunakan harus asyik, informatif, dan mendidik anak-anak SMP usia 13-14 tahun.
+            `;
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: `Tolong analisis komentar ini: "${inputVal}"` }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] },
+                        generationConfig: {
+                            responseMimeType: "application/json",
+                            responseSchema: {
+                                type: "OBJECT",
+                                properties: {
+                                    level: { type: "STRING" },
+                                    category: { type: "STRING" },
+                                    reason: { type: "STRING" },
+                                    action: { type: "STRING" }
+                                },
+                                required: ["level", "category", "reason", "action"]
+                            }
+                        }
+                    })
+                });
+
+                if (!response.ok) throw new Error("Terjadi masalah koneksi server AI.");
+                const data = await response.json();
+                const analysisResult = JSON.parse(data.candidates[0].content.parts[0].text);
+
+                // Update UI
+                const badge = document.getElementById('badge-level');
+                badge.innerText = analysisResult.level;
+                if (analysisResult.level === "AMAN") {
+                    badge.className = "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-green-100 text-green-700";
+                } else if (analysisResult.level === "RINGAN") {
+                    badge.className = "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-yellow-100 text-yellow-700";
+                } else {
+                    badge.className = "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100 text-red-700 animate-pulse";
+                }
+
+                document.getElementById('analysis-category').innerText = analysisResult.category;
+                document.getElementById('analysis-reason').innerText = analysisResult.reason;
+                document.getElementById('analysis-action').innerText = analysisResult.action;
+
+                resultCard.classList.remove('hidden');
+            } catch (err) {
+                console.error(err);
+                alert("Oops! AI sedang sibuk atau offline. Coba sebentar lagi ya!");
+            } finally {
+                loader.classList.add('hidden');
+            }
+        }
+
+
+        // --- KUIS INTERAKTIF LOGIC ---
+        const quizQuestions = [
+            {
+                q: "Apa perbedaan paling utama antara bercanda biasa dengan perundungan digital?",
+                options: [
+                    "Bercanda menggunakan emoji, perundungan tidak pernah menggunakan emoji.",
+                    "Perundungan terjadi secara terus menerus/berulang dan ditujukan untuk menyakiti atau mempermalukan target.",
+                    "Perundungan hanya terjadi di pagi hari saja, bercanda bebas di malam hari.",
+                    "Bercanda selalu dilakukan oleh satu orang, perundungan selalu beramai-ramai."
+                ],
+                correct: 1
+            },
+            {
+                q: "Kamu melihat temanmu di-kick dari grup WhatsApp kelas secara sengaja agar dia merasa terasingkan. Tindakan ini termasuk jenis...",
+                options: [
+                    "Outing & Trickery",
+                    "Cyberstalking",
+                    "Exclusion (Pengecualian/Pengucilan)",
+                    "Flaming"
+                ],
+                correct: 2
+            },
+            {
+                q: "Apa kepanjangan dari taktik pertahanan diri yang tepat 'Stop, Block, Tell'?",
+                options: [
+                    "Sembunyi, Blokir akun, Teriak kencang di kamar.",
+                    "Abaikan (jangan diladeni), Blokir akun pelaku, Laporkan kejadian kepada orang dewasa tepercaya/guru.",
+                    "Simpan sandi rahasia, Blokir teman sekelas, Telepon polisi langsung.",
+                    "Senyum ke pelaku, Berbagi sandi pribadi, Beritahu semua orang rahasiamu."
+                ],
+                correct: 1
+            },
+            {
+                q: "Membuat akun palsu dengan foto temanmu lalu memposting komentar kotor di akun OSIS agar temanmu dibenci guru termasuk tindakan...",
+                options: [
+                    "Impersonation (Penyamaran)",
+                    "Cyberstalking",
+                    "Harassment biasa",
+                    "Bercandaan cerdas"
+                ],
+                correct: 0
+            },
+            {
+                q: "Tindakan apa yang pertama kali harus kamu lakukan sebagai bukti konkret untuk melaporkan aksi perundungan?",
+                options: [
+                    "Langsung membalas dengan kata-kata yang lebih kasar dan frontal.",
+                    "Mengambil tangkapan layar (screenshot) pesan atau komentar pelaku sebagai bukti otentik.",
+                    "Menghapus media sosial kita selamanya agar terlupakan.",
+                    "Membagikan nomor pribadi pelaku agar dia diteror oleh orang lain."
+                ],
+                correct: 1
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        let score = 0;
+        let selectedOptionIdx = null;
+
+        function startQuiz() {
+            currentQuestionIdx = 0;
+            score = 0;
+            selectedOptionIdx = null;
+
+            document.getElementById('quiz-start-screen').classList.add('hidden');
+            document.getElementById('quiz-result-screen').classList.add('hidden');
+            document.getElementById('quiz-play-screen').classList.remove('hidden');
+
+            showQuestion();
+        }
+
+        function showQuestion() {
+            selectedOptionIdx = null;
+            const currentQ = quizQuestions[currentQuestionIdx];
+
+            // Update Progress bar & texts
+            document.getElementById('quiz-progress-text').innerText = `Pertanyaan ${currentQuestionIdx + 1} dari ${quizQuestions.length}`;
+            document.getElementById('quiz-timer').innerText = `Skor Saat Ini: ${score}`;
+            document.getElementById('quiz-progress-bar').style.width = `${((currentQuestionIdx + 1) / quizQuestions.length) * 100}%`;
+
+            // Set question text
+            document.getElementById('quiz-question').innerText = currentQ.q;
+
+            // Render options
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            currentQ.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-2xl border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/50 transition-all font-medium text-sm flex items-center justify-between group";
+                btn.innerHTML = `
+                    <span>${opt}</span>
+                    <i class="fa-regular fa-circle text-slate-300 group-hover:text-indigo-400 text-lg"></i>
+                `;
+                btn.onclick = () => selectOption(idx, btn);
+                optionsContainer.appendChild(btn);
+            });
+
+            // Reset next button
+            const nextBtn = document.getElementById('btn-next-quiz');
+            nextBtn.disabled = true;
+            nextBtn.className = "bg-slate-300 text-slate-500 font-bold py-3 px-6 rounded-xl transition-all cursor-not-allowed";
+        }
+
+        function selectOption(idx, buttonElement) {
+            if (selectedOptionIdx !== null) return; // Prevent double-answering before moving next
+
+            selectedOptionIdx = idx;
+            const currentQ = quizQuestions[currentQuestionIdx];
+            const isCorrect = (idx === currentQ.correct);
+
+            // Visual responses on buttons
+            const optionsContainer = document.getElementById('quiz-options');
+            const buttons = optionsContainer.getElementsByTagName('button');
+
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+                if (i === currentQ.correct) {
+                    // Correct Highlight
+                    buttons[i].className = "w-full text-left p-4 rounded-2xl border-2 border-green-500 bg-green-50 text-green-900 font-medium text-sm flex items-center justify-between";
+                    buttons[i].querySelector('i').className = "fa-solid fa-circle-check text-green-600 text-lg";
+                } else if (i === idx) {
+                    // Wrong Highlight
+                    buttons[i].className = "w-full text-left p-4 rounded-2xl border-2 border-red-500 bg-red-50 text-red-900 font-medium text-sm flex items-center justify-between";
+                    buttons[i].querySelector('i').className = "fa-solid fa-circle-xmark text-red-600 text-lg";
+                } else {
+                    // Neutral Disable
+                    buttons[i].className = "w-full text-left p-4 rounded-2xl border border-slate-100 text-slate-400 font-medium text-sm flex items-center justify-between opacity-50";
+                }
+            }
+
+            if (isCorrect) {
+                score += 20;
+            }
+
+            // Enable next button
+            const nextBtn = document.getElementById('btn-next-quiz');
+            nextBtn.disabled = false;
+            nextBtn.className = "bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md shadow-indigo-600/10 cursor-pointer";
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIdx < quizQuestions.length - 1) {
+                currentQuestionIdx++;
+                showQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            document.getElementById('quiz-play-screen').classList.add('hidden');
+            document.getElementById('quiz-result-screen').classList.remove('hidden');
+
+            // Score Display
+            document.getElementById('quiz-score-display').innerText = `${score}/100`;
+            const accuracy = (score / 100) * 100;
+            document.getElementById('quiz-accuracy-display').innerText = `${accuracy}%`;
+
+            // Custom feedback message
+            const emojiEl = document.getElementById('result-emoji');
+            const feedbackEl = document.getElementById('quiz-feedback-text');
+
+            if (score === 100) {
+                emojiEl.innerText = "🏆";
+                feedbackEl.innerText = "Sempurna! Kamu adalah Duta Pelopor Anti-Bullying Informatika yang jempolan!";
+            } else if (score >= 60) {
+                emojiEl.innerText = "⭐";
+                feedbackEl.innerText = "Hebat! Kamu mengerti etika digital dasar dengan sangat baik. Pertahankan terus kebaikanmu!";
+            } else {
+                emojiEl.innerText = "💡";
+                feedbackEl.innerText = "Jangan sedih. Yuk, baca modul belajar sekali lagi biar pemahamanmu lebih tajam.";
+            }
+        }
+
+
+        // --- GENERATOR POSTER (AI IMAGEN-4) LOGIC ---
+        async function generatePoster() {
+            const selectVal = document.getElementById('poster-style').value;
+            const loader = document.getElementById('image-loader');
+            const resultCard = document.getElementById('image-result');
+
+            loader.classList.remove('hidden');
+            resultCard.classList.add('hidden');
+
+            const apiKey = ""; // Diisi otomatis saat runtime oleh platform
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        instances: { prompt: selectVal },
+                        parameters: { sampleCount: 1 }
+                    })
+                });
+
+                if (!response.ok) throw new Error("Terjadi masalah saat membuat gambar.");
+                const result = await response.json();
+                
+                const base64Image = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                
+                // Show Result
+                const posterImg = document.getElementById('generated-poster-img');
+                posterImg.src = base64Image;
+
+                const downloadBtn = document.getElementById('download-poster-btn');
+                downloadBtn.href = base64Image;
+
+                resultCard.classList.remove('hidden');
+            } catch (err) {
+                console.error(err);
+                alert("Gagal memanggil generator gambar AI. Silakan coba kembali beberapa saat lagi.");
+            } finally {
+                loader.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
